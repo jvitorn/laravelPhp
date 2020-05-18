@@ -1,3 +1,5 @@
 # Crud Laravel
 
-Aula:Criand Crud com laravel 
+
+## João Vitor Novais De Carvalho 
+ - Aula: Criando Crud com laravel 
