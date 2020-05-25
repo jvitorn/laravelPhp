@@ -1,1 +1,2 @@
-FROM gitpod/workspace-mysql USER gitpod
+FROM gitpod/workspace-mysql 
+USER gitpod
