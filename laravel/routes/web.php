@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    return redirect('usuarios');
 });
 Route:: get('usuarios', 'UserController@listarUsuarios');
