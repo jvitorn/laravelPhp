@@ -23,3 +23,4 @@ Route::get('usuarios', 'UserController@listarUsuarios');
 Route::post('storage','UserController@storage');
 Route::get('editar/{userId}','UserController@edit');
 Route::put('update/{user}','UserController@update');
+Route::delete('delete/{user}','UserController@delete');

@@ -151,7 +151,10 @@
     <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
     <td><a href='editar/{{ $user->id }}' id='editar' title='Editar'></a></td>
            <td>
-              <form action="" method="post">
+              <form action="delete/{{ $user->id }}" method="post">
+                @csrf
+
+                @method('delete')
                   <input id="deletar" type="submit" value="" title='Deletar'>
               </form>
            </td>
