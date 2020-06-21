@@ -16,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function() {
     return redirect('usuarios');
 });
-Route:: get('usuarios', 'UserController@listarUsuarios');
+Route::get('cadastrar', function () {
+    return view('novo');
+});
+Route::get('usuarios', 'UserController@listarUsuarios');
+Route::post('storage','UserController@storage');
+Route::get('editar/{userId}','UserController@edit');
+Route::put('update/{user}','UserController@update');

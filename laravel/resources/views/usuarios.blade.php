@@ -137,19 +137,19 @@
            <th>Desde</th>
            <th colspan=2>Operação</th>
         </tr>
-
 @foreach($users as $user)
     <tr>
     <td>
-        <p>ID:{{$user->id}}</p>
+        <p>{{$user->id}}</p>
     </td>
     <td>
-        <p>Nome:{{$user->name}}</p>
+        <p>{{$user->name}}</p>
     </td>
     <td>
-        <p>Email:{{$user->email}}</p>
+        <p>{{$user->email}}</p>
     </td>
-    <td><a href='#' id='editar' title='Editar'></a></td>
+    <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
+    <td><a href='editar/{{ $user->id }}' id='editar' title='Editar'></a></td>
            <td>
               <form action="" method="post">
                   <input id="deletar" type="submit" value="" title='Deletar'>

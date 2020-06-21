@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cadastro de Usuários - Aprendendo Laravel</title>
+  <title>Editar de Usuários - Aprendendo Laravel</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
   <style>
     *{
@@ -124,13 +124,15 @@
 </head>
 <body>
   <header>
-    <h1>Aprendendo Laravel<span></span><a href='usuarios'>home</a><span></span><a href='cadastrar'>cadastrar</a>
+    <h1>Aprendendo Laravel<span></span><a href='usuarios'>home</a><span></span><a href='cadastrar'>Editar</a>
     </h1>
   </header>
   <main>
-	    <h2>Cadastrar usuário</h2>
-	    <form action='storage' method="post" id="cadastro">
+	    <h2>Editar usuário</h2>
+	    <form action='../update/{{ $user->id }}' method="post" id="cadastro">
             @csrf
+
+            @method('put')
 	        <p>
 		        <label for="name">Nome do usuário</label>
 		        <input type="text" name="name" placeholder="exemplo: Fulano de Tal">
@@ -143,7 +145,7 @@
 		        <label for="password">Senha do usuário</label>
 		        <input type="password" name="password" placeholder="exemplo: 12345">
 	        </p>
-            <input type="submit" value="Cadastrar usuário">
+            <input type="submit" value="Editar usuário">
 	    </form>
   </main>
   <footer>
